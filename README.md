@@ -1,6 +1,7 @@
 ## DeepSeek Multi-Account Exporter & Regex Search Tool
 
 DeepSeek Tool is a multi-threaded research utility designed for exporting chat history data and performing powerful regex-based searches either live during export or offline on previously exported datasets.
+
 you can use this tool to automatically search through the content of DeepSeek account histories that you have access to (credentials). Enjoy!
 
 ### Features
