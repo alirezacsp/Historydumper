@@ -1,0 +1,66 @@
+## DeepSeek Multi-Account Exporter & Regex Search Tool
+
+DeepSeek Tool is a multi-threaded research utility designed for exporting chat history data and performing powerful regex-based searches either live during export or offline on previously exported datasets.
+
+### Features
+
+* Multi-account session processing
+* Live regex search during data collection
+* Offline search on exported datasets
+* SQLite message database support
+* Multi-threaded performance
+* Proxy support
+* Retry and timeout control
+
+### Use Cases
+
+* Security research
+* Data auditing
+* Forensics analysis
+* Log mining
+* Pattern discovery in large datasets
+
+### Modes
+
+**Export Mode**
+Export chat sessions and messages from multiple accounts.
+
+**Live Search Mode**
+Run regex search while exporting data.
+
+**Offline Search Mode**
+Run regex search on previously exported files.
+
+**Database Mode**
+Store messages in SQLite for advanced querying.
+
+### Requirements
+
+```
+pip install requests tqdm
+```
+
+### Basic Usage
+
+Export data:
+
+```
+python deepseek_tool.py --accounts accounts.txt --output exports
+```
+
+Live search during export:
+
+```
+python deepseek_tool.py --accounts accounts.txt --patterns patterns.txt --live-search
+```
+
+Offline search:
+
+```
+python deepseek_tool.py --offline-search --patterns patterns.txt --output exports
+```
+
+### Disclaimer
+
+This tool is intended for authorized security research and data analysis only.
+Do not use against systems or accounts without explicit permission.
