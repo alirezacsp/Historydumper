@@ -1,1 +1,1 @@
-(?i)(password|key|root|passwd|pwd|pass|jwt|secret|apikey|email|phone|powershell)\s*[=:]\s*[^\s]+
+(?i)(password|key|root|passwd|pwd|pass|jwt|secret|apikey|email|phone|powershell|ssh|ftp|sftp|rdp)\s*[=:]\s*[^\s]+
