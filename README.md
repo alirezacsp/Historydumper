@@ -5,7 +5,7 @@ DeepSeek Tool is a multi-threaded research utility designed for exporting chat h
 
 you can use this tool to automatically search through the content of DeepSeek account histories that you have access to (credentials). Enjoy!
 
-[demo.gif](https://github.com/alirezacsp/Historydumper/blob/65bc0ad153b2abea320add1c1c0ee5e324f9a129/demo.gif)
+![demo.gif](https://github.com/alirezacsp/Historydumper/blob/65bc0ad153b2abea320add1c1c0ee5e324f9a129/demo.gif)
 
 ### Features
 
