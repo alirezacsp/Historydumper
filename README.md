@@ -83,7 +83,8 @@ email:pass:chat.deepseek.com
 chat.deepseek.com | email:pass
 
 etc…
-This tool has been built based on DeepSeek's current architecture and may need to be updated in the future.
+
+## This tool has been built based on DeepSeek's current architecture and may need to be updated in the future.
 
 ### Disclaimer
 
