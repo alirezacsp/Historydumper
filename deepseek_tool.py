@@ -322,7 +322,7 @@ def init_db(db_path: str):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="deepseek multi-account exporter + regex search")
+    parser = argparse.ArgumentParser(description="deepseek multi-account exporter + regex search power 1.0.0 - Developed by alirezacsp")
     parser.add_argument("--accounts", "-a")
     parser.add_argument("--threads", "-t", type=int, default=4)
     parser.add_argument("--patterns", "-p")
