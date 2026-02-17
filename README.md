@@ -39,7 +39,7 @@ Store messages in SQLite for advanced querying.
 ### Requirements
 
 ```
-pip install requests tqdm
+pip install -r requirements.txt
 ```
 
 ### Basic Usage
@@ -47,7 +47,7 @@ pip install requests tqdm
 Export data:
 
 ```
-python deepseek_tool.py --accounts accounts.txt --output exports
+python deepseek_tool.py -a accounts.txt --output exports
 ```
 
 Live search during export:
