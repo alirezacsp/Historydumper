@@ -56,9 +56,7 @@ def parse_accounts(file_path: str) -> List[Tuple[str,str]]:
 def timestamp() -> str:
     return datetime.now().strftime("%Y%m%d_%H%M%S")
 
-# -----------------------
-# Account Worker
-# -----------------------
+
 class AccountWorker:
     def __init__(self, username, password, output_base, session_opts,
                  patterns=None, live_search=False, db_conn=None,
@@ -116,7 +114,7 @@ class AccountWorker:
 
                 time.sleep(1 + attempt)
 
-        raise RuntimeError(f"Login failed for {self.username}: {last_err}")
+        raise RuntimeError(f"")
 
     # ---------------- FETCH ----------------
     def fetch_sessions(self, token):
@@ -167,7 +165,7 @@ class AccountWorker:
         try:
             token, login_response = self.login()
         except Exception as e:
-            console.print(f"[red]Login failed for {self.username}: {e}[/red]")
+            console.print(f"")
             return {"username": self.username, "ok": False}
 
         with open(os.path.join(folder, "login_response.json"), "w", encoding="utf-8") as f:
@@ -230,9 +228,9 @@ class AccountWorker:
             if self.rate_delay:
                 time.sleep(self.rate_delay)
 
-        # ✅ فقط اگر match داشت نمایش بده
+
         if live_matches:
-            console.print(f"\n[bold cyan]نام کاربری:[/bold cyan] [bold yellow]{self.username}[/bold yellow]\n")
+            console.print(f"\n[bold cyan]username:[/bold cyan] [bold yellow]{self.username}[/bold yellow]\n")
 
             table = Table(title="Live Search Results", box=box.ROUNDED, show_lines=True)
             table.add_column("Chat ID", style="magenta")
@@ -248,9 +246,8 @@ class AccountWorker:
         return {"username": self.username, "ok": True}
 
 
-# -----------------------
-# Offline Search
-# -----------------------
+
+
 def offline_search_files(root_dir: str, patterns: List[str], out_file: str = None):
 
     compiled = [(p, re.compile(p, re.IGNORECASE)) for p in patterns]
@@ -304,9 +301,7 @@ def offline_search_files(root_dir: str, patterns: List[str], out_file: str = Non
     return grouped
 
 
-# -----------------------
-# SQLite
-# -----------------------
+
 def init_db(db_path: str):
     conn = sqlite3.connect(db_path, check_same_thread=False)
     cur = conn.cursor()
@@ -325,9 +320,7 @@ def init_db(db_path: str):
     return conn
 
 
-# -----------------------
-# MAIN
-# -----------------------
+
 def main():
     parser = argparse.ArgumentParser(description="deepseek multi-account exporter + regex search")
     parser.add_argument("--accounts", "-a")
