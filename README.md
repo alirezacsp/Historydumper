@@ -67,13 +67,21 @@ python deepseek_tool.py --offline-search --patterns patterns.txt --output export
 ## Tips
 
 Try to write patterns specifically for a particular target.
+
 Use the native language of the target destination in your searches.
+
 The number of inputs should be large. 
+
 there's no need to sort the list,Different credential formats are supported, such as:
+
 https://chat.deepseek.com:user:pass
+
 chat.deepseek.com:email:pass
+
 email:pass:chat.deepseek.com
+
 chat.deepseek.com | email:pass
+
 etc…
 This tool has been built based on DeepSeek's current architecture and may need to be updated in the future.
 
